@@ -1,0 +1,37 @@
+{
+	"name": "Trabalho Low Code",
+	"version": "1.0.0.0",
+	"description": "",
+	"id": "",
+	"unique-id": "nfn52xoj9q6",
+	"viewport-width": 854,
+	"viewport-height": 480,
+	"author": "",
+	"email": "",
+	"website": "",
+	"orientations": "landscape",
+	"c2version": "244",
+	"c3version": "r432.2",
+	"ife": true,
+	"used-plugins": [
+		"TiledBg",
+		"Sprite",
+		"Keyboard",
+		"Audio",
+		"Spritefont2",
+		"Mouse"
+	],
+	"used-behaviors": [
+		"solid",
+		"Platform",
+		"bound",
+		"scrollto",
+		"Pin",
+		"LOS",
+		"Bullet",
+		"destroy",
+		"Anchor",
+		"Flash",
+		"Fade"
+	]
+}

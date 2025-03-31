@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --primary-color: #000000AA;
     --secondary-color: #DC0D1F;
@@ -16,6 +17,7 @@
     --shadows-color: #00000011;
     --box-shadow-color: #000000;
 }
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;

@@ -8,8 +8,8 @@
     --primary-color: #000000AA;
     --secondary-color: #DC0D1F;
 
-    --background-color-1: #5e5e5e;
-    --background-color-2: #000000AA;
+    --background-color-1: #12102e;
+    --background-color-2: #000000CC;
 
     --font-color: #FFFFFF;
     --font-color-2: #000000;
@@ -28,13 +28,16 @@ body {
 
 /* HEADER */
 header {
-    display: block;
-    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
     top: 0;
     text-align: center;
 
     width: 100%;
-    height: 14vh;
+    height: 12vh;
+    padding: 0 64px;
     backdrop-filter: blur(20px);
 
     color: var(--font-color);
@@ -43,13 +46,15 @@ header {
 }
 header h1 {
     display: flex;
-    justify-content: center;
+    justify-content: baseline;
     align-items: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
+    width: max-content;
     height: 64%;
     font-size: 3.0em;
     
+    text-shadow: 0 2px 2px var(--secondary-color);
     box-shadow: 0 2px 4px var(--shadows-color);
 }
 header nav {
@@ -57,16 +62,17 @@ header nav {
     justify-content: center;
     align-items: center;
 
-    width: 100%;
+    width: max-content;
     height: 36%;
-
-    background-color: var(--shadows-color);
 }
 header nav a {
     transition: all 0.2s;
     text-decoration: none;
-    margin: 0 8px;
-    font-size: 1.2em;
+    font-size: 1.4em;
+
+    margin: 2px 8px;
+    padding: 0 4px;
+
     color: var(--font-color);
 }
 header nav a:hover {
@@ -75,27 +81,34 @@ header nav a:hover {
 header nav a:active {
     color: var(--font-color-2);
 }
+header nav a:first-child {
+    text-shadow: 0 1px 4px currentColor;
+}
 
 
 /* CONTAINERS */
 .details-container, .game-container {
     font-family: Roboto, Arial, Times;
-    min-height: 86vh;
+    min-height: 100vh;
 }
 .details-container {
     display: flex;
     align-items: flex-start;
     justify-content: center;
 
-    padding: 32px 16px;
+    padding: calc(12vh + 32px) 16px 0 16px;
     width: 100%;
+
+    background-image: url('orig_big_2.png');
+    background-position: top;
+    background-size: cover;
 }
 .game-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: flex-start;
 
-    padding: 32px 16px 0 16px;
+    padding: calc(12vh + 32px) 16px 0 16px;
     width: 100%;
     gap: 32px;
 }
@@ -112,8 +125,8 @@ header nav a:active {
 .game-frame {
     overflow: hidden;
 
-    width: 854px;
-    height: 480px;
+    width: 56vw;
+    height: 31.5vw;
     border-radius: 8px;
 
     border: 3px ridge var(--secondary-color);
@@ -127,9 +140,9 @@ header nav a:active {
     display: block;
     justify-content: space-between;
 
-    max-width: 854px;
     padding: 12px;
     border-radius: 8px;
+    backdrop-filter: blur(20px);
 
     box-shadow: 0 2px 4px var(--box-shadow-color);
     background-color: var(--background-color-2);
@@ -137,7 +150,9 @@ header nav a:active {
 }
 .section-aside {
     max-width: 854px;
-    height: 480px;
+    height: 31.5vw;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .section {
     width: 854px;
@@ -158,7 +173,6 @@ header nav a:active {
 .section dl {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    font-size: 1.4em;
 
     padding-left: 16px;
     gap: 8px;
@@ -169,7 +183,7 @@ header nav a:active {
 .section dd {
     font-weight: lighter;
 }
-.section a, .section-aside a, .section ul, .section-aside ul {
+.section a, .section-aside a, .section ul, .section-aside ul, .section dl {
     font-size: 1.4em;
     line-height: 24px;
 }
@@ -180,11 +194,13 @@ header nav a:active {
 
 /* SEÇÂO DOS CONTROLES */
 .controls-grid {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 .controls-item {
     margin: 12px 0;
-    padding: 12px;
+    padding: 24px 12px;
     border-radius: 8px;
 
     background-color: var(--shadows-color);
@@ -198,14 +214,26 @@ header nav a:active {
     gap: 10px;
 }
 .controls-icon a {
+    display: inline-block;
+
+    font-family: monospace;
+    text-transform: uppercase;
     text-align: center;
 
-    min-width: 20%;
-    padding: 6px;
+    min-width: 35px;
+    padding: 10px 16px;
     border-radius: 8px;
 
-    border: 2px solid currentColor;
+    border: 2px ridge currentColor;
+    box-shadow: 2px 2px 4px var(--box-shadow-color);
     background-color: var(--font-color-2);
+}
+.controls-item a {
+    text-align: center;
+    font-size: 1.0em;
+}
+.controls-icon a:only-child {
+    padding: 10px 64px;
 }
 
 
@@ -215,17 +243,102 @@ footer {
 
     width: 100%;
     padding: 20px;
+    font-size: 1.2em;
 
     color: var(--font-color);
     background-color: #000000;
 }
 .social-links a {
-    transition: all 0.2S;
+    transition: all 0.2S ease-in-out;
     text-decoration: none;
     padding: 0 4px;
     color: var(--secondary-color);
 }
 .social-links a:hover {
-    text-decoration: none;
-    color: var(--primary-color);
+    color: var(--font-color);
 }
+.social-links a:active {
+    color: var(--font-color-2);
+}
+
+/* FORMATAÇÂO MOBILE */
+@media (max-width: 1150px) {
+    /* HEADER */
+    header {
+        display: block;
+        justify-content: center;
+        height: 14vh;
+        padding: 0 0;
+    }
+    header h1 {
+        justify-content: center;
+        width: 100%;
+    
+        font-size: 2.0em;
+    }
+    header nav {
+        width: 100%;
+    }
+    header nav a {
+        font-size: 1.2em;
+    }
+
+    /* CONTAINERS */
+    .details-container {
+        padding: calc(14vh + 32px) 16px 0 16px;
+    }
+    .game-container {
+        display: block;
+        align-items: center;
+        padding: calc(14vh + 32px) 16px 0 16px;
+    }
+
+    /* FRAME DO JOGO */
+    .game-frame {
+        width: 100%;
+        height: 60vw;
+    }
+
+    /* SEÇÕES */
+    .section {
+        width: 100%;
+    }
+    .section-aside {
+        max-width: 100%;
+        height: auto;
+        margin: 16px 0;
+    }
+    .section h2, .section-aside h2 {
+        font-size: 1.4em;
+    }
+    .section h3, .section-aside h3 {
+        font-size: 1.2em;
+    }
+    .section a, .section-aside a, .section ul, .section-aside ul, .section dl {
+        font-size: 1.0em;
+    }
+    .section-aside span a {
+        font-size: 0.6em;
+    }
+
+    /* SEÇÂO DOS CONTROLES */
+    .controls-item {
+        padding: 12px 6px;
+    }
+    .controls-icon {
+        font-size: 1.8em;
+        padding: 8px 16px;
+    }
+    .controls-icon a:only-child {
+        padding: 8px 64px;
+    }
+
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.0em;
+    }
+}
+  

@@ -1,0 +1,89 @@
+/* FORMATAÇÂO MOBILE */
+@media (max-width: 1150px) {
+    :root {
+        /* VARIÁVEIS DE FORMATAÇÂO DO HEADER */
+        --header-height: 96px;
+    }
+    
+    /* HEADER */
+    header {
+        display: block;
+        justify-content: center;
+        height: var(--header-height);
+        padding: 0 0;
+    }
+    header h1 {
+        justify-content: center;
+        width: 100%;
+    
+        font-size: 2.0em;
+    }
+    header nav {
+        width: 100%;
+    }
+    header nav a {
+        font-size: 1.2em;
+    }
+
+    /* CONTAINERS */
+    .details-container {
+        padding: calc(var(--header-height) + 32px) 16px 32px 16px;
+    }
+    .game-container {
+        display: block;
+        align-items: center;
+        padding: calc(var(--header-height) + 32px) 16px 32px 16px;
+    }
+
+    /* FRAME DO JOGO */
+    .game-frame {
+        width: 100%;
+        height: 60vw;
+    }
+
+    /* SEÇÕES */
+    .section {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .section-aside {
+        max-width: 100%;
+        height: auto;
+        margin: 16px 0;
+    }
+    .section h2, .section-aside h2 {
+        font-size: 1.4em;
+    }
+    .section h3, .section-aside h3 {
+        font-size: 1.2em;
+    }
+    .section a, .section-aside a, .section ul, .section-aside ul, .section dl {
+        font-size: 1.0em;
+    }
+    .section-aside span a {
+        font-size: 0.6em;
+    }
+
+    /* SEÇÂO DOS CONTROLES */
+    .controls-item {
+        padding: 12px 6px;
+    }
+    .controls-icon {
+        font-size: 1.8em;
+        padding: 8px 16px;
+    }
+    .controls-icon a:only-child {
+        padding: 8px 64px;
+    }
+
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.0em;
+    }
+}
+  

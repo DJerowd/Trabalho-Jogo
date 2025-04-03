@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* VARIÁVEIS DE PALETA DE CORES */
+    --primary-color: #DC0D1F;
+
+    --header-color: #000000AA;
+    --footer-color: #000000;
+
+    --background-color-1: #12102e;
+    --background-color-2: #000000CC;
+
+    --font-color: #FFFFFF;
+    --font-color-2: #000000;
+
+    --shadows-color: #00000011;
+    --box-shadow-color: #000000;
+
+    /* VARIÁVEIS DE FORMATAÇÂO DO HEADER */
+    --header-height: 96px;
+
+    /* VARIÁVEIS DE FORMATAÇÂO DO FRAME DO JOGO */
+    --game-frame-width: 56vw;
+    --game-frame-height: 31.5vw;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--font-color);
+    background-color: var(--background-color-1)
+}

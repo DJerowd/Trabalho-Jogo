@@ -16,6 +16,8 @@
 
     --shadows-color: #00000011;
     --box-shadow-color: #000000;
+
+    --header-height: 96px;
 }
 
 body {
@@ -36,7 +38,7 @@ header {
     text-align: center;
 
     width: 100%;
-    height: 12vh;
+    height: var(--header-height);
     padding: 0 64px;
     backdrop-filter: blur(20px);
 
@@ -96,10 +98,10 @@ header nav a:first-child {
     align-items: flex-start;
     justify-content: center;
 
-    padding: calc(12vh + 32px) 16px 0 16px;
+    padding: calc(var(--header-height) + 32px) 16px 32px 16px;
     width: 100%;
 
-    background-image: url('orig_big_2.png');
+    background-image: url('Background.png');
     background-position: top;
     background-size: cover;
 }
@@ -108,7 +110,7 @@ header nav a:first-child {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: flex-start;
 
-    padding: calc(12vh + 32px) 16px 0 16px;
+    padding: calc(var(--header-height) + 32px) 16px 0 16px;
     width: 100%;
     gap: 32px;
 }
@@ -191,6 +193,20 @@ header nav a:first-child {
     font-size: 1.0em;
 }
 
+/* LINKS DE REDE SOCIAL */
+.social-links a {
+    transition: all 0.2S ease-in-out;
+    text-decoration: none;
+    padding: 0 4px;
+    color: var(--secondary-color);
+}
+.social-links a:hover {
+    color: var(--font-color);
+}
+.social-links a:active {
+    color: var(--font-color-2);
+}
+
 
 /* SEÇÂO DOS CONTROLES */
 .controls-grid {
@@ -248,26 +264,18 @@ footer {
     color: var(--font-color);
     background-color: #000000;
 }
-.social-links a {
-    transition: all 0.2S ease-in-out;
-    text-decoration: none;
-    padding: 0 4px;
-    color: var(--secondary-color);
-}
-.social-links a:hover {
-    color: var(--font-color);
-}
-.social-links a:active {
-    color: var(--font-color-2);
-}
 
 /* FORMATAÇÂO MOBILE */
 @media (max-width: 1150px) {
+    :root {
+        --header-height: 96px;
+    }
+    
     /* HEADER */
     header {
         display: block;
         justify-content: center;
-        height: 14vh;
+        height: var(--header-height);
         padding: 0 0;
     }
     header h1 {
@@ -285,12 +293,12 @@ footer {
 
     /* CONTAINERS */
     .details-container {
-        padding: calc(14vh + 32px) 16px 0 16px;
+        padding: calc(var(--header-height) + 32px) 16px 32px 16px;
     }
     .game-container {
         display: block;
         align-items: center;
-        padding: calc(14vh + 32px) 16px 0 16px;
+        padding: calc(var(--header-height) + 32px) 16px 0 16px;
     }
 
     /* FRAME DO JOGO */

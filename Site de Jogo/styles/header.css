@@ -16,6 +16,7 @@ header {
     background-color: var(--header-color);
     box-shadow: 0 2px 4px var(--box-shadow-color);
 }
+/* TITULO */
 header h1 {
     display: flex;
     justify-content: baseline;
@@ -24,11 +25,12 @@ header h1 {
 
     width: max-content;
     height: 64%;
-    font-size: 3.0em;
+    font-size: 2.6em;
     
     text-shadow: 0 2px 2px var(--primary-color);
     box-shadow: 0 2px 4px var(--shadows-color);
 }
+/* NAVEGAÇÂO */
 header nav {
     display: flex;
     justify-content: center;
@@ -37,6 +39,7 @@ header nav {
     width: max-content;
     height: 36%;
 }
+/* ITEM DE NAVEGAÇÂO */
 header nav a {
     transition: all 0.2s;
     text-decoration: none;
@@ -49,6 +52,7 @@ header nav a {
 }
 header nav a:hover {
     color: var(--primary-color);
+    border-bottom: 2.4px solid currentColor;
 }
 header nav a:active {
     color: var(--font-color-2);

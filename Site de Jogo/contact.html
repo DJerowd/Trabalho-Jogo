@@ -18,18 +18,20 @@
             <nav>
                 <a href="index.html" title="Jogar">Jogar</a>
                 <a href="gameDetails.html" title="Sobre">Sobre</a>
-                <a href="developer.html" title="Contato">Contato</a>
+                <a href="contact.html" title="Contato">Contato</a>
             </nav>
         </header>
 
         <main class="details-container">
-            <!-- DETALHES SOBRE O CRIADOR -->
             <section class="section">
+                <!-- DETALHES SOBRE O CRIADOR -->
                 <h2>Sobre o Criador:</h2>
-                <a>Meu nome é Djerowd Alexsander Ruiz Moreschi Faria, sou estudante de TADS.</a><br>
-                <a>Este é meu trabalho relacionado à matéria de Desenvolvimento Low Code.</a><br><br>
+                <a>Meu nome é Djerowd Alexsander Ruiz Moreschi Faria, sou estudante de TADS.</a>
+                <a>Este é meu trabalho relacionado à matéria de Desenvolvimento Low Code.</a>
+                <br><br>
                 
-                <h3>Contatos:</h3>
+                <!-- CONTATOS DO CRIADOR -->
+                <h3>Minhas Redes:</h3>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/djerowd-moreschi/" class="social-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16" xml:space="preserve">
@@ -44,6 +46,41 @@
                         GitHub
                     </a>
                 </div>
+                <br>
+
+                <!-- FORMULÁRIO DE CONTATO -->
+                <form class="form">
+                    <h3>Entre em contato:</h3>
+
+                    <!-- NOME -->
+                    <label>
+                        Nome:
+                        <input type="text" name="name" placeholder="Seu nome..." required>
+                    </label>
+
+                    <!-- E-MAIL -->
+                    <label>
+                        E-mail:
+                        <input type="email" name="email" placeholder="E-mail para contato..." autocomplete="" required>
+                    </label>
+
+                    <!-- TELEFONE -->
+                    <label>
+                        Telefone:
+                        <input type="tel" name="phone" placeholder="Telefone para contato..." required>
+                    </label>
+
+                    <!-- MENSAGEM -->
+                    <label>
+                        Mensagem:
+                        <textarea type="text" name="message" rows="4" maxlength="1000" placeholder="Mensagem..." required></textarea>
+                    </label>
+
+                    <div class="submit-btn">
+                        <button type="submit">Enviar mensagem</button>
+                    </div>
+                    
+                </form>
 
             </section>
         </main>

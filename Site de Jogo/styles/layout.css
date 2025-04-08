@@ -90,6 +90,60 @@
     font-size: 1.0em;
 }
 
+/* FORMULARIO DE CONTATO */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.0em;
+    padding: 0 2vw;
+}
+.form label input, .form label textarea {
+    text-indent: 8px;
+    font-weight: lighter;
+    font-size: 1.0em;
+    padding: 8px 6px;
+    border-radius: 8px;
+
+    border: 1px solid var(--font-color);
+    color: var(--font-color);
+    background-color: var(--background-color-2);
+}
+.form label input:focus, .form label textarea:focus {
+    outline: 0;
+    border: 1px ridge var(--primary-color);
+}
+.form label textarea {
+    resize: vertical;
+    max-height: 24vh;
+    width: 100%;
+}
+
+/* BOTÃO DE ENVIO */
+.submit-btn {
+    display: flex;
+    justify-content: center;
+}
+.submit-btn button {
+    transition: all ease-in-out 0.2s;
+    font-size: 1.2em;
+    padding: 6px 8px;
+    border-radius: 8px;
+
+    border: 2px solid var(--primary-color);
+    color: var(--font-color);
+    background-color: var(--primary-color);
+}
+.submit-btn button:hover {
+    color: var(--primary-color);
+    background-color: var(--font-color);
+}
+
 /* LINKS DE REDE SOCIAL */
 .social-links a {
     transition: all 0.2S ease-in-out;

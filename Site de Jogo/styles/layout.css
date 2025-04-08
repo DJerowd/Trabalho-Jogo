@@ -6,14 +6,16 @@
     padding: calc(var(--header-height) + 32px) 16px 32px 16px;
     width: 100%;
     min-height: 100vh;
-}
-.details-container {
-    display: flex;
-    justify-content: center;
 
     background-image: url('../assets/Background.png');
     background-position: top;
     background-size: cover;
+}
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 }
 .game-container {
     display: grid;
@@ -82,9 +84,12 @@
 .section dd {
     font-weight: lighter;
 }
-.section a, .section-aside a, .section ul, .section-aside ul, .section dl {
+.section a, .section-aside a, .section p, .section-aside p, .section ul, .section-aside ul, .section dl {
     font-size: 1.4em;
     line-height: 24px;
+}
+.section p, .section-aside p {
+    text-indent: 16px;
 }
 .section-aside span a {
     font-size: 1.0em;
@@ -99,14 +104,13 @@
 .form label {
     display: flex;
     flex-direction: column;
-    font-weight: bold;
-    font-size: 1.0em;
+    font-size: 1.4em;
     padding: 0 2vw;
 }
 .form label input, .form label textarea {
     text-indent: 8px;
     font-weight: lighter;
-    font-size: 1.0em;
+    font-size: 0.8em;
     padding: 8px 6px;
     border-radius: 8px;
 
@@ -119,34 +123,59 @@
     border: 1px ridge var(--primary-color);
 }
 .form label textarea {
+    font-family: Roboto, Arial, Times;
     resize: vertical;
+    min-height: 6vh;
     max-height: 24vh;
     width: 100%;
+}
+.form p {
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0 2vw;
 }
 
 /* BOTÃO DE ENVIO */
 .submit-btn {
     display: flex;
     justify-content: center;
+    padding: 0 2vw;
 }
 .submit-btn button {
-    transition: all ease-in-out 0.2s;
-    font-size: 1.2em;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+    align-items: center;
+    overflow: hidden;
+    font-family: monospace;
+
+    font-size: 1.4em;
     padding: 6px 8px;
+    gap: 6px;
     border-radius: 8px;
+    max-width: 100%;
 
     border: 2px solid var(--primary-color);
-    color: var(--font-color);
-    background-color: var(--primary-color);
+    color: var(--primary-color);
+    background: none;
 }
 .submit-btn button:hover {
-    color: var(--primary-color);
-    background-color: var(--font-color);
+    color: var(--font-color);
+    background: var(--primary-color);
+}
+.submit-btn button:active {
+    scale: 0.9;
+    box-shadow: 0 0 0 2px var(--font-color);
+}
+.submit-btn svg {
+    left: 0;
+    fill: currentColor;
+    width: 1.2em;
 }
 
 /* LINKS DE REDE SOCIAL */
 .social-links a {
-    transition: all 0.2S ease-in-out;
+    transition: all 0.2s ease-in-out;
     text-decoration: none;
     padding: 0 4px;
     color: var(--primary-color);
@@ -162,19 +191,23 @@
 .controls-grid {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
 }
 .controls-item {
-    margin: 12px 0;
-    padding: 24px 12px;
+    padding: 12px 8px;
     border-radius: 8px;
 
     background-color: var(--shadows-color);
 }
+.controls-item a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 .controls-icon {
     display: flex;
     justify-content: center;
-    font-size: 1.2em;
+    font-size: 1.8em;
 
     width: 100%;
     gap: 10px;
@@ -193,10 +226,6 @@
     border: 2px ridge currentColor;
     box-shadow: 2px 2px 4px var(--box-shadow-color);
     background-color: var(--font-color-2);
-}
-.controls-item a {
-    text-align: center;
-    font-size: 1.0em;
 }
 .controls-icon a:only-child {
     padding: 10px 64px;

@@ -59,23 +59,38 @@
     .section h3, .section-aside h3 {
         font-size: 1.2em;
     }
-    .section a, .section-aside a, .section ul, .section-aside ul, .section dl {
+    .section a, .section-aside a, .section p, .section-aside p, .section ul, .section-aside ul, .section dl {
         font-size: 1.0em;
     }
-    .section-aside span a {
-        font-size: 0.6em;
+    .section dl {
+        line-height: 18px;
+    }
+    .section p, .section-aside p {
+        text-indent: 8px;
+    }
+
+    /* FORMULARIO DE CONTATO */
+    .form label {
+        font-size: 1.0em;
+    }
+    .form label input, .form label textarea {
+        font-size: 1.0em;
+    }
+    .form p {
+        font-size: 1.0em;
+    }
+
+    /* BOTÃO DE ENVIO */
+    .submit-btn button {
+        font-size: 1.2em;
     }
 
     /* SEÇÂO DOS CONTROLES */
-    .controls-item {
-        padding: 12px 6px;
+    .controls-grid {
+        gap: 6px;
     }
     .controls-icon {
-        font-size: 1.8em;
-        padding: 8px 16px;
-    }
-    .controls-icon a:only-child {
-        padding: 8px 64px;
+        font-size: 1.2em;
     }
 
 

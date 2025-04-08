@@ -23,12 +23,13 @@
         </header>
 
         <main class="details-container">
+            
             <section class="section">
                 <!-- DETALHES SOBRE O CRIADOR -->
                 <h2>Sobre o Criador:</h2>
-                <a>Meu nome é Djerowd Alexsander Ruiz Moreschi Faria, sou estudante de TADS.</a>
-                <a>Este é meu trabalho relacionado à matéria de Desenvolvimento Low Code.</a>
-                <br><br>
+                <p>Meu nome é Djerowd Alexsander Ruiz Moreschi Faria, sou estudante de TADS. Este é meu trabalho relacionado à matéria de Desenvolvimento Low Code.</p>
+                
+                <br>
                 
                 <!-- CONTATOS DO CRIADOR -->
                 <h3>Minhas Redes:</h3>
@@ -46,43 +47,52 @@
                         GitHub
                     </a>
                 </div>
-                <br>
+            </section>
 
+            <section class="section">
                 <!-- FORMULÁRIO DE CONTATO -->
-                <form class="form">
-                    <h3>Entre em contato:</h3>
+                <form id="contactForm" class="form">
+                    <h2>Entre em contato:</h2>
 
                     <!-- NOME -->
                     <label>
                         Nome:
-                        <input type="text" name="name" placeholder="Seu nome..." required>
+                        <input id="name" name="name" type="text" placeholder="Seu nome..." autocomplete="off">
                     </label>
 
                     <!-- E-MAIL -->
                     <label>
                         E-mail:
-                        <input type="email" name="email" placeholder="E-mail para contato..." autocomplete="" required>
+                        <input id="email" name="email" type="email" placeholder="E-mail para contato..." autocomplete="on">
                     </label>
 
                     <!-- TELEFONE -->
                     <label>
                         Telefone:
-                        <input type="tel" name="phone" placeholder="Telefone para contato..." required>
+                        <input id="phone" name="phone" type="tel" placeholder="Telefone para contato..." autocomplete="on">
                     </label>
 
                     <!-- MENSAGEM -->
                     <label>
                         Mensagem:
-                        <textarea type="text" name="message" rows="4" maxlength="1000" placeholder="Mensagem..." required></textarea>
+                        <textarea id="message" name="message" rows="4" maxlength="1000" placeholder="Mensagem..."></textarea>
                     </label>
 
-                    <div class="submit-btn">
-                        <button type="submit">Enviar mensagem</button>
-                    </div>
-                    
-                </form>
+                    <!-- MENSAGEM DE RETORNO -->
+                    <p id="formMessage"></p>
 
+                    <div class="submit-btn">
+                        <button type="submit">
+                            <span>ENVIAR MENSAGEM</span>
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                </form>
             </section>
+
         </main>
     
         <!-- FOOTER -->
@@ -91,6 +101,45 @@
             <a>Todos os direitos reservados.</a>
         </footer>
 
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+            
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const message = document.getElementById('message').value.trim();
+                const formMessage = document.getElementById('formMessage');
+            
+                // EXPRESSÕES REGULARES
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const phoneRegex = /^\(?\d{2}\)?[\s.-]?\d{4,5}[\s.-]?\d{4}$/;
+            
+                // VALIDAÇÕES
+                if (!name || !email || !phone || !message) {
+                    formMessage.textContent = 'Preencha todos os campos obrigatórios!';
+                    formMessage.style.color = 'var(--primary-color)';
+                    return;
+                }
+                if (!emailRegex.test(email)) {
+                    formMessage.textContent = 'Digite um e-mail válido!';
+                    formMessage.style.color = 'var(--primary-color)';
+                    return;
+                }
+                if (!phoneRegex.test(phone)) {
+                    formMessage.textContent = 'Digite um número de telefone válido!';
+                    formMessage.style.color = 'var(--primary-color)';
+                    return;
+                }
+            
+                // SIMULAÇÃO DE ENVIO
+                formMessage.textContent = 'Mensagem enviada com sucesso!';
+                formMessage.style.color = 'var(--font-color)';
+            
+                // LIMPAR CAMPOS AO ENVIAR FORMULÁRIO COM SUCESSO
+                document.getElementById('contactForm').reset();
+            });
+        </script>
     </body>
 </html>
 

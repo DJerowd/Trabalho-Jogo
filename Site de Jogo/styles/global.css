@@ -11,11 +11,11 @@
     --header-color: #000000AA;
     --footer-color: #000000BB;
 
-    --background-color-1: #12102E;
+    --background-color: #12102E;
     --background-color-2: #000000CC;
 
     --font-color: #FFFFFF;
-    --font-color-2: #000000;
+    --font-color-2: #2D2D2D;
 
     --shadows-color: #00000011;
     --box-shadow-color: #000000;
@@ -28,14 +28,14 @@
     --game-frame-height: 31.5vw;
 
     /* VARIÁVEIS DE TIPOS DE FONTES */
-    --font-family-1: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    --font-family-2: Roboto, Arial, Times;
-    --font-family-3: monospace;
+    --font-family-1: 'Sawarabi Mincho', Cochin, Georgia, serif;
+    --font-family-2: Roboto, Arial, Times, serif;
+    --font-family-3: monospace, serif;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--font-color);
-    background-color: var(--background-color-1)
+    background-color: var(--background-color)
 }

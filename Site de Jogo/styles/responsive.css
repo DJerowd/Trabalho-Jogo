@@ -26,6 +26,9 @@
     }
 
     /* CONTAINERS */
+    .container {
+        background-size: cover;
+    }
     .details-container, .game-container {
         padding: calc(var(--header-height) + 32px) 16px 32px 16px;
         gap: 16px;
@@ -73,6 +76,9 @@
     }
     .section p, .section-aside p {
         text-indent: 8px;
+    }
+    .section-home {
+        background-size: cover;
     }
 
     /* SEÇÃO COM IMAGEM */

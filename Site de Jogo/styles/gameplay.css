@@ -18,7 +18,8 @@
     width: 100%;
     height: 100%;
 }
-.game-frame #play-btn {
+
+#play-btn {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 
@@ -32,15 +33,15 @@
     color: var(--primary-color);
     background-color: var(--shadows-color);
 }
-.game-frame #play-btn:hover {
+#play-btn:hover {
     opacity: 100%;
     scale: 1.1;
 }
-.game-frame #play-btn:active {
+#play-btn:active {
     opacity: 60%;
     scale: 0.9;
 }
-.game-frame #game-iframe-container {
+#game-iframe-container {
     display: none;
 }
 

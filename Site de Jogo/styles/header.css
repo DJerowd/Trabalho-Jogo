@@ -4,24 +4,27 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    font-family: var(--font-family-1);
+    z-index: 1;
 
+    top: 0;
     width: 100%;
     height: var(--header-height);
     padding: 0 64px;
     backdrop-filter: blur(20px);
 
     color: var(--font-color);
-    background-color: var(--header-color);
+    background-image: linear-gradient( var(--box-shadow-color), var(--header-color) );
     box-shadow: 0 2px 4px var(--box-shadow-color);
 }
+
 /* TITULO */
 header h1 {
     display: flex;
     justify-content: baseline;
     align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: all 0.6s ease-in-out;
 
     width: max-content;
     height: 64%;
@@ -30,6 +33,11 @@ header h1 {
     text-shadow: 0 2px 2px var(--primary-color);
     box-shadow: 0 2px 4px var(--shadows-color);
 }
+header h1:hover {
+    cursor: pointer;
+    text-shadow: 0 2px 2px var(--primary-color), 0 0px 8px var(--font-color);
+}
+
 /* NAVEGAÇÂO */
 header nav {
     display: flex;
@@ -39,6 +47,7 @@ header nav {
     width: max-content;
     height: 36%;
 }
+
 /* ITEM DE NAVEGAÇÂO */
 header nav a {
     transition: all 0.2s;
@@ -51,11 +60,11 @@ header nav a {
     color: var(--font-color);
 }
 header nav a:hover {
+    scale: 1.1;
     color: var(--primary-color);
-    border-bottom: 2.4px solid currentColor;
 }
 header nav a:active {
-    color: var(--font-color-2);
+    scale: 0.9;
 }
 header nav a:first-child {
     text-shadow: 0 1px 4px currentColor;

@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="styles/header.css">
         <link rel="stylesheet" type="text/css" href="styles/footer.css">
         <link rel="stylesheet" type="text/css" href="styles/layout.css">
+        <link rel="stylesheet" type="text/css" href="styles/gameplay.css">
         <link rel="stylesheet" type="text/css" href="styles/responsive.css">
     </head>
     <body>
@@ -31,10 +32,23 @@
                 <p>Elimine todos os lobos presentes em cada fase para poder avançar.</p>
             </section>
 
-            <!-- FRAME DO JOGO -->
+            <!-- IFRAME DO JOGO -->
             <div class="game-frame">
-                <!-- <iframe src="Trabalho Low Code/index.html" width="100%" height="100%" allow="fullscreen; autoplay; encrypted-media" frameborder="0" allowfullscreen="true" msallowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowpaymentrequest="false" referrerpolicy="unsafe-url" sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups" scrolling="no"></iframe> -->
-                <iframe src="https://www.crazygames.com.br/embed/ragdoll-archers" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"></iframe>
+
+                <div id="play-btn-container">
+                    <button id="play-btn">
+
+                        <svg class="icon" id="Play" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" >
+                            <path d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"></path>
+                        </svg>
+
+                        <span>Jogar</span>
+
+                    </button>
+                </div>
+
+                <div id="game-iframe-container"></div>
+
             </div>
 
             <!-- CONTROLES -->
@@ -69,20 +83,27 @@
         </main>
     
         <!-- FOOTER -->
-        <footer class="creator-info">
-            <a>© 2025 DJerowd.</a>
+        <footer>
+            <a>© 2025 DJerowd Moreschi.</a>
             <a>Todos os direitos reservados.</a>
         </footer>
 
         <script>
-            // IMPORTAR COMPONENTES
-            fetch("components/header.html")
-                .then(response => response.text())
-                .then(data => document.getElementById("header").innerHTML = data);
-
-            fetch("components/footer.html")
-                .then(response => response.text())
-                .then(data => document.getElementById("footer").innerHTML = data);
+            document.getElementById("play-btn").addEventListener("click", function () {
+                // CRIAR O IFRAME DE JOGO
+                const iframe = document.createElement("iframe");
+                iframe.src = "https://www.crazygames.com.br/embed/ragdoll-archers";
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                iframe.setAttribute("frameborder", "0");
+        
+                // INSERIR O IFRAME DE JOGO
+                document.getElementById("game-iframe-container").appendChild(iframe);
+        
+                // ALTERNAR PARA O IFRAME DE JOGO
+                document.getElementById("play-btn-container").style.display = "none";
+                document.getElementById("game-iframe-container").style.display = "block";
+            });
         </script>
     </body>
 </html>

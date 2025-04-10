@@ -3,14 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     /* VARIÁVEIS DE PALETA DE CORES */
     --primary-color: #DC0D1F;
 
     --header-color: #000000AA;
-    --footer-color: #000000CC;
+    --footer-color: #000000BB;
 
-    --background-color-1: #12102e;
+    --background-color-1: #12102E;
     --background-color-2: #000000CC;
 
     --font-color: #FFFFFF;
@@ -20,12 +21,18 @@
     --box-shadow-color: #000000;
 
     /* VARIÁVEIS DE FORMATAÇÂO DO HEADER */
-    --header-height: 64px;
+    --header-height: 96px;
 
     /* VARIÁVEIS DE FORMATAÇÂO DO FRAME DO JOGO */
     --game-frame-width: 56vw;
     --game-frame-height: 31.5vw;
+
+    /* VARIÁVEIS DE TIPOS DE FONTES */
+    --font-family-1: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --font-family-2: Roboto, Arial, Times;
+    --font-family-3: monospace;
 }
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;

@@ -1,0 +1,102 @@
+/* FORMULARIO DE CONTATO */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4em;
+    padding: 0 2vw;
+}
+.form label input, .form label textarea {
+    text-indent: 8px;
+    font-weight: lighter;
+    font-size: 0.8em;
+    padding: 8px 6px;
+    border-radius: 8px;
+
+    border: 1px solid var(--font-color);
+    color: var(--font-color);
+    background-color: var(--background-color-2);
+}
+.form label input:focus, .form label textarea:focus {
+    outline: 0;
+    border: 1px ridge var(--primary-color);
+}
+.form label input::placeholder, .form label textarea::placeholder {
+    opacity: 60%;
+    color: var(--primary-color);
+}
+.form label textarea {
+    font-family: var(--font-family-2);
+    transition: all 0.2s ease-in-out;
+
+    resize: vertical;
+    height: 38px;
+    min-height: 38px;
+    max-height: 190px;
+    width: 100%;
+}
+.form label textarea:focus {
+    height: 190px;
+}
+.form p {
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0 2vw;
+}
+
+/* BOTÃO DE ENVIO */
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    padding: 0 2vw;
+}
+.submit-btn button {
+    display: flex;
+    transition: all 0.2s ease-in-out;
+    align-items: center;
+    overflow: hidden;
+    font-family: var(--font-family-3);
+
+    font-size: 1.4em;
+    padding: 6px 8px;
+    gap: 6px;
+    border-radius: 8px;
+    max-width: 100%;
+
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: none;
+}
+.submit-btn button:hover {
+    color: var(--font-color);
+    background: var(--primary-color);
+}
+.submit-btn button:active {
+    scale: 0.9;
+    box-shadow: 0 0 0 2px var(--font-color);
+}
+.submit-btn svg {
+    left: 0;
+    fill: currentColor;
+    width: 1.2em;
+}
+
+/* MENSAGEM DE RETORNO */
+.formMessage {
+    display: flex;
+    justify-content: center;
+
+    margin: 0 2vw;
+    border-radius: 8px;
+
+    border: 1px ridge currentColor;
+    background-color: var(--background-color-2);
+}
+.formMessage:empty {
+    display: none;
+}

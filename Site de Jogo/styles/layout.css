@@ -1,39 +1,25 @@
 /* CONTAINERS */
 .details-container, .game-container {
     align-items: flex-start;
-    font-family: Roboto, Arial, Times;
+    font-family: var(--font-family-2);
 
     padding: calc(var(--header-height) + 32px) 16px 32px 16px;
     width: 100%;
     min-height: 100vh;
+    gap: 32px;
 
     background-image: url('../assets/Background.png');
     background-position: top;
-    background-size: cover;
+    background-size: contain;
 }
 .details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
 }
 .game-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
-}
-
-/* FRAME DO JOGO */
-.game-frame {
-    overflow: hidden;
-
-    width: var(--game-frame-width);
-    height: var(--game-frame-height);
-    border-radius: 8px;
-
-    border: 3px ridge var(--primary-color);
-    background-color: var(--box-shadow-color);
-    box-shadow: 0 2px 4px var(--box-shadow-color);
 }
 
 /* SEÇÕES */
@@ -95,82 +81,29 @@
     font-size: 1.0em;
 }
 
-/* FORMULARIO DE CONTATO */
-.form {
+/* SEÇÃO COM IMAGEM */
+#details-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    image-rendering: pixelated;
+}
+#details-section img {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.form label {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.4em;
-    padding: 0 2vw;
-}
-.form label input, .form label textarea {
-    text-indent: 8px;
-    font-weight: lighter;
-    font-size: 0.8em;
-    padding: 8px 6px;
-    border-radius: 8px;
-
-    border: 1px solid var(--font-color);
-    color: var(--font-color);
-    background-color: var(--background-color-2);
-}
-.form label input:focus, .form label textarea:focus {
-    outline: 0;
-    border: 1px ridge var(--primary-color);
-}
-.form label textarea {
-    font-family: Roboto, Arial, Times;
-    resize: vertical;
-    min-height: 6vh;
-    max-height: 24vh;
-    width: 100%;
-}
-.form p {
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
     transition: all 0.2s ease-in-out;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 0 2vw;
-}
 
-/* BOTÃO DE ENVIO */
-.submit-btn {
-    display: flex;
-    justify-content: center;
-    padding: 0 2vw;
+    width: min-content;
+    height: 80%;
+    object-fit: contain;
 }
-.submit-btn button {
-    display: flex;
-    transition: all 0.2s ease-in-out;
-    align-items: center;
-    overflow: hidden;
-    font-family: monospace;
-
-    font-size: 1.4em;
-    padding: 6px 8px;
-    gap: 6px;
-    border-radius: 8px;
-    max-width: 100%;
-
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    background: none;
+#details-section img:hover {
+    scale: 1.1;
 }
-.submit-btn button:hover {
-    color: var(--font-color);
-    background: var(--primary-color);
-}
-.submit-btn button:active {
+#details-section img:active {
     scale: 0.9;
-    box-shadow: 0 0 0 2px var(--font-color);
-}
-.submit-btn svg {
-    left: 0;
-    fill: currentColor;
-    width: 1.2em;
+    filter: drop-shadow(0 0 2px var(--primary-color));
 }
 
 /* LINKS DE REDE SOCIAL */
@@ -185,48 +118,4 @@
 }
 .social-links a:active {
     color: var(--font-color-2);
-}
-
-/* SEÇÂO DOS CONTROLES */
-.controls-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.controls-item {
-    padding: 12px 8px;
-    border-radius: 8px;
-
-    background-color: var(--shadows-color);
-}
-.controls-item a {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.controls-icon {
-    display: flex;
-    justify-content: center;
-    font-size: 1.8em;
-
-    width: 100%;
-    gap: 10px;
-}
-.controls-icon a {
-    display: inline-block;
-
-    font-family: monospace;
-    text-transform: uppercase;
-    text-align: center;
-
-    min-width: 35px;
-    padding: 10px 16px;
-    border-radius: 8px;
-
-    border: 2px ridge currentColor;
-    box-shadow: 2px 2px 4px var(--box-shadow-color);
-    background-color: var(--font-color-2);
-}
-.controls-icon a:only-child {
-    padding: 10px 64px;
 }

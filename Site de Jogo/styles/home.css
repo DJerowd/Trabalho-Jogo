@@ -1,11 +1,13 @@
 .start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: var(--font-family-1);
 
     padding: 6px 24px;
     min-width: 32vw;
+    gap: 4vh;
     border-radius: 8px;
-
-    /* background-color: var(--background-color-2); */
 }
 .start h1 {
     text-align: center;
@@ -13,20 +15,4 @@
 
     color: var(--font-color);
     text-shadow: 0 2px 1px var(--primary-color);
-}
-.start a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    font-size: 1.4em;
-
-    color: var(--primary-color);
-}
-.start a:hover {
-    scale: 1.1;
-}
-.start a:active {
-    scale: 0.9;
 }

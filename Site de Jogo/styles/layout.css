@@ -10,12 +10,14 @@
     gap: 32px;
 
     background-image: url('../assets/Background.png');
-    background-position: top;
+    background-position: bottom;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 .container {
     padding: 0;
     background-image: url('../assets/Background-Home.png');
+    background-size: cover;
 }
 .details-container {
     display: flex;
@@ -85,7 +87,6 @@
 .section-aside span a {
     font-size: 1.0em;
 }
-
 .section-home {
     display: flex;
     flex-direction: column;
@@ -138,4 +139,37 @@
 }
 .social-links a:active {
     color: var(--font-color-2);
+}
+
+
+/* BOTÂO PARA JOGAR */
+#game-btn {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-family: var(--font-family-1);
+    font-weight: bold;
+    font-size: 1.2em;
+
+    width: max-content;
+    max-width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--background-color-2);
+    backdrop-filter: blur(20px);
+}
+#game-btn:hover {
+    scale: 1.1;
+    color: var(--font-color);
+    background-color: var(--primary-color);
+}
+#game-btn:active {
+    scale: 0.9;
 }

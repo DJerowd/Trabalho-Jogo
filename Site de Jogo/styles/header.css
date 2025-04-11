@@ -33,6 +33,10 @@ header h1 {
     text-shadow: 0 2px 2px var(--primary-color);
     box-shadow: 0 2px 4px var(--shadows-color);
 }
+header h1 a {
+    text-decoration: none;
+    color: var(--font-color);
+}
 header h1:hover {
     cursor: pointer;
     text-shadow: 0 2px 2px var(--primary-color), 0 0px 8px var(--font-color);

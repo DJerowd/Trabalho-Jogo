@@ -109,7 +109,6 @@ self.C3_JsPropNameTable = [
 	{Tiles: 0},
 	{Kills: 0},
 	{FadeOut: 0},
-	{Title: 0},
 	{Moon: 0},
 	{MoonRed: 0},
 	{Endpoint2: 0},
@@ -123,7 +122,9 @@ self.C3_JsPropNameTable = [
 	{EndGameClouds: 0},
 	{EndGameSun: 0},
 	{EndGameBackground: 0},
-	{FadeIn: 0}
+	{FadeIn: 0},
+	{FonteDeSprites: 0},
+	{Sprite: 0}
 ];
 
 self.InstanceType = {
@@ -152,7 +153,6 @@ self.InstanceType = {
 	Tiles: class extends self.ITiledBackgroundInstance {},
 	Kills: class extends self.ISpriteFontInstance {},
 	FadeOut: class extends self.ITiledBackgroundInstance {},
-	Title: class extends self.ISpriteFontInstance {},
 	Moon: class extends self.ISpriteInstance {},
 	MoonRed: class extends self.ISpriteInstance {},
 	Endpoint2: class extends self.ISpriteInstance {},
@@ -166,5 +166,7 @@ self.InstanceType = {
 	EndGameClouds: class extends self.ITiledBackgroundInstance {},
 	EndGameSun: class extends self.ISpriteInstance {},
 	EndGameBackground: class extends self.ITiledBackgroundInstance {},
-	FadeIn: class extends self.ITiledBackgroundInstance {}
+	FadeIn: class extends self.ITiledBackgroundInstance {},
+	FonteDeSprites: class extends self.ISpriteFontInstance {},
+	Sprite: class extends self.ISpriteInstance {}
 }

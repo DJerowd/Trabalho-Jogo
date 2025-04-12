@@ -96,6 +96,16 @@
                 document.getElementById("play-btn-container").style.display = "none";
                 document.getElementById("game-iframe-container").style.display = "block";
             });
+
+            // BLOQUEAR MOVIMENTAÇÂO DO SITE DURANTE O JOGO
+            const gameKeys = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " ", "Spacebar"];
+            window.addEventListener("keydown", function (e) {
+            const isGameVisible = document.getElementById("game-iframe-container").style.display !== "none";
+                if (isGameVisible && gameKeys.includes(e.key)) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+            
         </script>
     </body>
 </html>

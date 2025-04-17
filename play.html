@@ -98,13 +98,15 @@
             });
 
             // BLOQUEAR MOVIMENTAÇÂO DO SITE DURANTE O JOGO
-            const gameKeys = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " ", "Spacebar"];
-            window.addEventListener("keydown", function (e) {
-            const isGameVisible = document.getElementById("game-iframe-container").style.display !== "none";
-                if (isGameVisible && gameKeys.includes(e.key)) {
-                    e.preventDefault();
+            const preventScrollKeys = (event) => {
+                const keys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space', ' '];
+                if (keys.includes(event.code)) {
+                    event.preventDefault();
                 }
-            }, { passive: false });
+            };
+            iframe.addEventListener('load', () => {
+                iframe.contentWindow.addEventListener('keydown', preventScrollKeys);
+            });
             
         </script>
     </body>

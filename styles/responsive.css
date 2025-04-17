@@ -114,6 +114,11 @@
         font-size: 1.2em;
     }
 
+    /* GALERIA DE IMAGENS */
+    .gallery {
+        display: none;
+    }
+
     /* FOOTER */
     footer {
         display: flex;

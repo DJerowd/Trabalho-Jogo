@@ -4,7 +4,7 @@
     align-items: center;
     font-family: var(--font-family-1);
 
-    padding: 6px 24px;
+    padding: calc(var(--header-height) + 6px) 24px;
     min-width: 32vw;
     gap: 4vh;
     border-radius: 8px;
@@ -15,4 +15,26 @@
 
     color: var(--font-color);
     text-shadow: 0 2px 1px var(--primary-color);
+}
+
+/* GALERIA DE IMAGENS */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    
+    gap: 8px;
+}
+.gallery img {
+    transition: all 0.2s ease-in-out;
+
+    width: 20vw;
+    height: 12vw;
+    border-radius: 8px;
+
+    box-shadow: 0 0 8px var(--box-shadow-color);
+}
+.gallery img:hover {
+    transform: scale(1.01);
 }
